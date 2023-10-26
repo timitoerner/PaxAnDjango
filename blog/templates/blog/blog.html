@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    {% for post in posts %}
+        <article>
+            <h1>{{ post.title }}</h1>
+            
+            {% if post.img %}
+                    <img src="{{ post.img.url }}" {% if post.imgAlt %} alt="{{ post.imgAlt }}" {% else %} alt="Artikle Bild" {% endif %}>
+            {% endif %}
+            <p>{{ post.content }}</p>
+            <p>Von <a href="#">{{ post.author }}</a> und am {{ post.datePosted|date:"j.n.Y" }} um {{ post.datePosted|date:"G:i" }} geposted</p>
+        </article>
+    {% endfor %}
+
+{% endblock content %}

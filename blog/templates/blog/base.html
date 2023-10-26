@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+
+    <title>PaxAn {% if title %} {{ title }} {% endif %}</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-left">
+            <a onclick="resetbg(this)" href="{% url 'blog-blog' %}">Home</a>
+            <a onclick="resetbg(this)" target="_blank" href="https://www.friedensschule.de/">Schule</a>
+            <a onclick="resetbg(this)" target="_blank" href="https://www.instagram.com/paxan.fsm/">Insta</a>
+            <a onclick="resetbg(this)" target="_blank" href="https://www.youtube.com/@PaxAn">Youtube</a>
+        </nav>
+        <nav class="nav-right">
+            <a onclick="this.style.backgroundColor = '#0000'" href="{% url 'blog-about' %}">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
+    <script src="{% static 'blog/js/base.js' %}"></script>
+</body>
+</html>

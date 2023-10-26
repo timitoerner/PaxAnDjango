@@ -1,0 +1,64 @@
+:root {
+    --color1: #EBF3E8;
+    --color2: #D2E3C8;
+    --color3: #B2C8BA;
+    --color4: #86A789;
+    --color5: #708c73;
+    --color6: #596f5b;
+    --color7: #425143;
+    --color8: #2f3a30;
+}
+
+body {
+    background-color: var(--color5);
+    color: var(--color8);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: var(--color6);
+}
+
+header {
+    height: calc(1rem + 5svh);
+    width: 100dvw;
+    position: sticky;
+    top: 0;
+    background-color: var(--color1);
+}
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0 calc(0.1rem + 1svw);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    transition: background-color 200ms, all 50ms;
+}
+nav a:hover {
+    background-color: #0001;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+main div {
+    width: calc(min(70% + 12rem, 80%));
+    padding: 1rem;
+    background-color: var(--color4);
+}
