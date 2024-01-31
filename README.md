@@ -1,0 +1,2 @@
+Name: AdminUser
+Passwd: AdminPassword
